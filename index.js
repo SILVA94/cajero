@@ -1,3 +1,6 @@
+const formulario = document.getElementById('formulario')
+
+
 const user = 'Ricardo'
 const password = 'Java123'
 
@@ -38,3 +41,5 @@ formulario.addEventListener('submit', function(evento){
     login(usuario,password)
     
  })
+
+ 
