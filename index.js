@@ -1,9 +1,6 @@
 
 const formulario = document.getElementById("formulario")
 
-
-
-
 const user = 'Ricardo'
 const password = 'Java123'
 
@@ -37,14 +34,6 @@ function login(u,p){
     }
 } 
 
-function retirar(){
-	
-    var resultado = (numero1 - numero2);
-    
-    resultado.innerHTML=  `"El resultado es : ${resultado}`
-    console.log(resultado)
-
-}
 formulario.addEventListener('submit', function(evento){
     evento.preventDefault()
     let user = document.getElementById('usuario').value
