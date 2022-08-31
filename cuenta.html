@@ -11,17 +11,32 @@
     <div class="container">
         <article class="consulta">
             <img src="./img/consulta.jpg"></img>
-            <h3>Consultar saldo</h3>
+            <input id="saldo" class="customInput" >
+            <button class="buttonStyle" type="submit" onclick="depositor()">Consultar saldo</button>
         </article>
-        <article>
+        <article class="consulta">
             <img src="./img/depositar.jpg"></img>
-            <h3>Depositar dinero </h3>
+            <input id="depositar" class="customInput" >
+            <button id="deposito" class="buttonStyle" type="submit">Depositar dinero</button>
         </article>
         
      </div>
-    <div>
+     <div class="container">
+        <article class="consulta">
+            <img src="./img/retirar.jpeg"></img>
+            <input id="retiro" type="number" class="customInput">
+            <button class="buttonStyle" id="retirar">Retirar dinero</button>
+        </article>
+        <article class="consulta">
+            <img src="./img/salida.png"></img>
+            <button class="buttonStyle">Salir</button>
+        </article>
         
-    </div>
+     </div>
+     <button onclick="depositor()"></button>
+     <div id="total"></div>
+
+     <script src="./index2.js"></script>
     
 
 </body>
