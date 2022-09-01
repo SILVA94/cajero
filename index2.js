@@ -1,50 +1,47 @@
 const deposito = document.getElementById("deposito")
-const total = document.getElementById("total")
 const retirar = document.getElementById("retirar")
- 
-const depositar = Number(document.getElementById('depositar').value)
+//const saldo =document.getElementById('saldo1').value
 
-
-const saldo12 = Number(document.getElementById('saldo').value)
-
-
-function depositor(){
-    //const depositar = Number(document.getElementById('depositar').value)
-    //const retiro= Number(document.getElementById('retiro').value)
-    const saldo = depositar+saldo12
-    document.getElementById('saldo1').innerHTML = ` Tu saldo es: ${saldo}`
-    
-    //document.getElementById('total').innerHTML = ` Tu saldo es: ${total}`
-    
-    console.log('lll', saldo)
+function modificarValue(dato){
+    const saldo =document.getElementById('saldo').value=dato
 }
+
+modificarValue(10)
 
 function menosDinero(){
+    let saldo12 = Number(document.getElementById('saldo').value)
     const retiro = Number(document.getElementById('retiro').value)
-    //const saldo = Number(document.getElementById('saldo').value)
-    
-    const resta = retiro-saldo12 
-    console.log('resultado resta', resta)
-    console.log('valor de saldo12', saldo12)
+    const resta = saldo12-retiro 
+    modificarValue(resta)
+    console.log('valor de saldo12', saldo)
     document.getElementById('saldo1').innerHTML = ` Tu saldo es: ${resta}`
-    console.log('variable de saldo final ', saldo12)
+    console.log('variable de saldo final ',typeof saldo)
+    
 }
+
+function depositor(){
+    let saldo12 = Number(document.getElementById('saldo').value)
+    const depositar = Number(document.getElementById('depositar').value)
+    const saldo = depositar+saldo12
+    modificarValue(saldo)
+    document.getElementById('saldo1').innerHTML = ` Tu saldo es: ${saldo}`
+    return saldo
+}
+
 
 deposito.addEventListener('click', function(evento){
     evento.preventDefault()
-    //const depositar = Number(document.getElementById('depositar').value)
-    const deposito = Number(document.getElementById('deposito').value)
-    console.log(depositar)
-    //depositor(depositar,saldo1)  
-    depositor(depositar,saldo12)
+    depositor()
+    console.log('El valor de depositor es: ',saldo)
 })
 
 retirar.addEventListener('click', function(evento){
     evento.preventDefault()
-    //const retiro= Number(document.getElementById('retiro').value)
-    //const saldo = Number(document.getElementById('saldo').value)
-    //menosDinero(retiro,saldo12)
     menosDinero()
-    
 })
+
+
+
+
+
 
